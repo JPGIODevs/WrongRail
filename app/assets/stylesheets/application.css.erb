@@ -1,7 +1,8 @@
 body, html{
-    background: url("https://images.mansionglobal.com//im-447696") no-repeat;
+  background-image: url(<%= asset_path "darkback.png" %>);
+  /*background-image: url(<%= asset_path "lightback.png" %>);*/
+  background-size: cover;
     /*background-color: #fff;*/
-    background-size: cover;
     color: white;
 }
 .navbar-nav, .navbar-brand {
@@ -20,9 +21,9 @@ body, html{
     background-color: transparent;
 }
 .navbar-nav{
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.1);
     padding: 0 2rem 0;
-    border-radius: 20px;
+    border-radius: 50px;
 }
 .navlogo{
   filter: invert(0);  
