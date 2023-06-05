@@ -1,2 +1,7 @@
-<h1>Cart#show</h1>
-<p>Find me in app/views/cart/show.html.erb</p>
+<h1>Cart</h1>
+<p>Your total is £<%= @cart.total %></p>
+
+<% @cart.orderables.each do |orderable| %>
+  <% product = orderable.product %>
+  <p><%= product.name %> x <%= orderable.quantity %> -> £<%= product.price * orderable.quantity %></p>
+<% end %>
