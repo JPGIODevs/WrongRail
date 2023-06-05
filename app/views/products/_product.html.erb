@@ -1,8 +1,7 @@
 <div id="<%= dom_id product %>">
-  <p>
-    <strong>Name:</strong>
+  <h1 style="color:red;">
     <%= product.name %>
-  </p>
+  </h1>
 
   <p>
     <strong>Description:</strong>
@@ -13,5 +12,11 @@
     <strong>Price:</strong>
     <%= product.price %>
   </p>
+
+  <%= form_with(url: cart_add_path) do |f| %>
+    <%= f.hidden_field :id, value: product.id %>
+    <%= f.number_field :quantity, value: 0, min: 1 %>
+    <%= f.submit "Add To Cart" %>
+  <% end %>
 
 </div>
