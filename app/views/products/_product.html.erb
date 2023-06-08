@@ -2,6 +2,21 @@
   <h1 style="color:red;">
     <%= product.name %>
   </h1>
+  
+  <!-- THERE IS GOING TO BE AN IMAGE HERE OR SUMFING --!>
+  <% if product.photos.any? %>
+    <div>
+      <% product.photos.each do |photo| %>
+        <% if photo.variable? %>
+          <%= image_tag photo, size: "100" %>
+        <% elsif photo.previewable? %>
+          <%= image_tag photo, rails_blob_path(photo, disposition: :attachment), size: "100" %>
+        <% else %>
+          <%= link_to photo.filename, rails_blob_path(photo, disposition: :attachment) %>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
 
   <p>
     <strong>Description:</strong>
