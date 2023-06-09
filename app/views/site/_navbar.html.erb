@@ -29,6 +29,11 @@
         <li class="nav-item">
           <a class="nav-link" style="color:white;" href="#">Contact Us</a>
         </li>
+        <li class="nav-item">
+          <%= link_to cart_path, class: "link" do %>
+            <%= render partial: "cart/cart" if @render_cart %> 
+<% end %>
+        </li>
       </ul>
     </div>
   </div>

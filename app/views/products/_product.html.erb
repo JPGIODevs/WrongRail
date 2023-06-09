@@ -1,9 +1,10 @@
+<% stylesheet_link_tag "product" %>
+
 <div id="<%= dom_id product %>">
-  <h1 style="color:red;">
+  <h1>
     <%= product.name %>
   </h1>
   
-  <!-- THERE IS GOING TO BE AN IMAGE HERE OR SUMFING --!>
   <% if product.photos.any? %>
     <div>
       <% product.photos.each do |photo| %>
@@ -17,7 +18,9 @@
       <% end %>
     </div>
   <% end %>
-
+  <div class="container">
+    <%= image_tag product.photos[0], class:"storemain" %>
+  </div>
   <p>
     <strong>Description:</strong>
     <%= product.description %>
