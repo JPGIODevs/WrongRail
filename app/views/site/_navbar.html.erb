@@ -7,13 +7,16 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav shadow-lg">
         <li class="nav-item">
-          <a class="navbar-brand " href="#">
+          <%= link_to site_index_path do %>
             <%= image_tag("navbar/navlogo.png", alt:"Bootstrap", size:"160x70", class:"navlogo") %>
-          </a>
+          <% end %>
         </li>
         <li class="nav-item">
-          <a class="nav-link" style="color:white;" href="#">Summer '23'</a>
+          <%= link_to products_path, class: "link" do %>
+            <p class="nav-link" style="color:white;">Summer '23'</p>
+          <% end %>
         </li>
+
         <li class="nav-item">
           <a class="nav-link" style="color:white;" href="#">Mens</a>
         </li>

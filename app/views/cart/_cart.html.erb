@@ -1,7 +1,7 @@
 <%= turbo_frame_tag "cart" do %>
   <strong class="text-white link">Cart</strong>
   <% if @cart.orderables.count > 0 %>
-    <% #render "cart/orderables" %>
+    <%= render "cart/orderables" %>
     <p><%= @cart.orderables.count %> item(s)</p>
   <% end %> 
 <% end %>

@@ -4,7 +4,8 @@
   <h1>
     <%= product.name %>
   </h1>
-  
+
+
   <% if product.photos.any? %>
     <div>
       <% product.photos.each do |photo| %>
@@ -18,14 +19,24 @@
       <% end %>
     </div>
   <% else %>
-    <p>Couldnt load</p>
+    <p>Couldnt load image.</p>
   <% end %>
 
-  <div class="container">
+
+  <div class="container mainphoto mt-5 pt-5">
+
     <% if (!product.photos[0].nil?) %>
+
       <%= image_tag product.photos[0], class:"storemain" %>
+
     <% end %>
+
   </div>
+
+  <div class="container secondaryphotos">
+
+  </div>
+
   <p>
     <strong>Description:</strong>
     <%= product.description %>
