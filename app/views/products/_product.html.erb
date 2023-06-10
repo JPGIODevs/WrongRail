@@ -17,9 +17,14 @@
         <% end %>
       <% end %>
     </div>
+  <% else %>
+    <p>Couldnt load</p>
   <% end %>
+
   <div class="container">
-    <%= image_tag product.photos[0], class:"storemain" %>
+    <% if (!product.photos[0].nil?) %>
+      <%= image_tag product.photos[0], class:"storemain" %>
+    <% end %>
   </div>
   <p>
     <strong>Description:</strong>
