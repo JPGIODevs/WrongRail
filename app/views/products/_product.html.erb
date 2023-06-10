@@ -1,4 +1,4 @@
-<% stylesheet_link_tag "product" %>
+<%= stylesheet_link_tag "product" %>
 
 <div id="<%= dom_id product %>">
   <h1>
@@ -23,11 +23,13 @@
   <% end %>
 
 
-  <div class="container mainphoto mt-5 pt-5">
+  <div class="mainphoto mt-5 pt-5">
 
     <% if (!product.photos[0].nil?) %>
 
-      <%= image_tag product.photos[0], class:"storemain" %>
+      <div class="storemain">
+        <%= image_tag product.photos[0] %>
+      </div>
 
     <% end %>
 
