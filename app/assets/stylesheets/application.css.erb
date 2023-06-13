@@ -1,8 +1,20 @@
+@media (min-width: 425px){
+  .nav-link{
+    font-size: 3vh;
+  }
+  
+}
+@media (max-width: 425px){
+  .nav-link{
+    font-size: 3vw;
+  } 
+}
+
 body, html{
-  background-image: url(<%= asset_path "lightback.png" %>);
-  background-size: cover;
-  background-color: #48a7df; 
   color: white;
+  height: 100%;
+  background: url(<%= asset_path "lightback.png" %>) no-repeat;
+  background-size: cover;
 }
 .navlogo{
   margin: 1rem;
