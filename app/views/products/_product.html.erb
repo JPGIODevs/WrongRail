@@ -1,7 +1,7 @@
 <%= stylesheet_link_tag "product" %>
 
 <div id="<%= dom_id product %>">
-  <h1>
+  <h1 class="font-monospace">
     <%= product.name %>
   </h1>
 
@@ -9,13 +9,7 @@
   <% if product.photos.any? %>
     <div>
       <% product.photos.each do |photo| %>
-        <% if photo.variable? %>
-          <%= image_tag photo, size: "100" %>
-        <% elsif photo.previewable? %>
-          <%= image_tag photo, rails_blob_path(photo, disposition: :attachment), size: "100" %>
-        <% else %>
-          <%= link_to photo.filename, rails_blob_path(photo, disposition: :attachment) %>
-        <% end %>
+        <!-- DO THE SMALL PHOTOS HERE --!>
       <% end %>
     </div>
   <% else %>
@@ -23,7 +17,7 @@
   <% end %>
 
 
-  <div class="mainphoto mt-5 pt-5">
+  <div class="mainphoto">
 
     <% if (!product.photos[0].nil?) %>
 
