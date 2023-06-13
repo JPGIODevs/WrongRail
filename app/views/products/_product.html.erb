@@ -1,7 +1,7 @@
 <%= stylesheet_link_tag "product" %>
 
 <div id="<%= dom_id product %>">
-  <h1 class="font-monospace">
+  <h1>
     <%= product.name %>
   </h1>
 
@@ -9,7 +9,7 @@
   <% if product.photos.any? %>
     <div>
       <% product.photos.each do |photo| %>
-        <!-- DO THE SMALL PHOTOS HERE --!>
+
       <% end %>
     </div>
   <% else %>
@@ -17,7 +17,7 @@
   <% end %>
 
 
-  <div class="mainphoto">
+  <div class="mainphoto mt-5 pt-5">
 
     <% if (!product.photos[0].nil?) %>
 
