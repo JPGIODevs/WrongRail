@@ -5,24 +5,14 @@
     <%= product.name %>
   </h1>
 
-
-  <% if product.photos.any? %>
-    <div>
-      <% product.photos.each do |photo| %>
-
-      <% end %>
-    </div>
-  <% else %>
-    <p>Couldnt load image.</p>
-  <% end %>
-
-
   <div class="mainphoto mt-5 pt-5">
 
     <% if (!product.photos[0].nil?) %>
 
-      <div class="storemain">
-        <%= image_tag product.photos[0] %>
+      <div class="storemain-frame">
+        <div class="storemain">
+          <%= image_tag product.photos[0] %>
+        </div>
       </div>
 
     <% end %>

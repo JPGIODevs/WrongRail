@@ -1,42 +1,32 @@
-<%= link_to site_index_path do %>
-  <%= image_tag("navbar/navlogo.png", alt:"Bootstrap", class:"navlogo") %>
-<% end %>
-
-<nav class="navbar navbar-expand-lg text-center navbar-fixed-top navbar-center">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <%= link_to products_path, class: "link" do %>
-            <p class="nav-link nav-text" style="color:white;">Summer2023</p>
-          <% end %>
+<!-- navbar -->
+<nav class="navbar navbar-expand bg-transparent">
+  <div class="container-fluid justify-content-end">
+    <div class="flex-grow-0">
+  <ul class="navbar-nav">
+        <li class="nav-item glownav">
+          <%= link_to "Summer'23", products_path, class:"nav-link text-white font-monospace"%>
         </li>
-
-        <li class="nav-item">
-          <a class="nav-link nav-text" style="color:white;" href="#">Mens</a>
+        <li class="nav-item glownav">
+          <%= link_to "Mens", products_path, class:"nav-link  text-white font-monospace"%>
+        </li>
+        <li class="nav-item glownav">
+          <%= link_to "Womens", products_path, class:"nav-link  text-white font-monospace"%>
+        </li>
+        <li class="nav-item glownav">
+          <%= link_to "Accessories", products_path, class:"nav-link  text-white font-monospace"%>
         </li>
         <li class="nav-item">
-          <a class="nav-link nav-text" style="color:white;" href="#">Womens</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-text" style="color:white;" href="#">Accessories</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-text" style="color:white;" href="#">SALE</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-text" style="color:white;" href="#">Contact Us</a>
-        </li>
-        <li class="nav-item">
-          <%= link_to cart_path, class: "link" do %>
-            <%= render partial: "cart/cart" if @render_cart %> 
-          <% end %>
+            <% if @cart.orderables.count > 0 %>
+              <%= link_to "Cart", products_path, class:"nav-link altglownav  text-white font-monospace"%>
+            <% else %>
+              <%= link_to "Cart", products_path, class:"nav-link glownav  text-white font-monospace"%>
+            <% end %>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+<%= link_to site_index_path do %>
+  <%= image_tag("navbar/navlogo.png", alt:"Bootstrap", class:"navlogo mt-3") %>
+<% end %>
 
