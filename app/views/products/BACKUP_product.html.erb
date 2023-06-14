@@ -1,15 +1,12 @@
 <%= stylesheet_link_tag "product" %>
 
 <div id="<%= dom_id product %>">
-
-  <div class="productwrapper">
-    <div class="mainphoto">
-      <% if (!product.photos[0].nil?) %>
-        <p>working ;)</p>
-      <% else %>
-        <p>No Photos :(</p>
-      <% end %>
-    </div>
+    <% if (!product.photos[0].nil?) %>
+      <div class="storemain-frame mt-5">
+        <%= image_tag product.photos[0] %>
+      </div>
+    <% end %>
+  </div>
 
   <div class="secondaryphotos">
     <!-- stuff here -->
@@ -30,4 +27,3 @@
   </div>
 
 </div>
-

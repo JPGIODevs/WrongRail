@@ -1,13 +1,36 @@
-@media (min-width: 425px){
+@media (min-width: 485px){
   .nav-link{
     font-size: 3vh;
   }
-  
+  .desktop{
+    display: block;
+  } 
+  .mobile{
+    display: none;
+  }
+  .navlogo{
+    margin-left: auto;
+    position: absolute;
+    right: 1dvw;
+  }
 }
-@media (max-width: 425px){
+
+@media (max-width: 485px){
   .nav-link{
     font-size: 3vw;
   } 
+  .desktop{
+    display: none;
+  } 
+  .mobile{
+    display: block;
+  }
+  .navlogo{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
 }
 
 body, html{
@@ -33,5 +56,9 @@ body, html{
 .altglownav{
   color: white;
   text-shadow: white 0px 0 4px;
+}
+.navlogo{
+  width: 15vw;
+  filter: invert(1);  
 }
 
