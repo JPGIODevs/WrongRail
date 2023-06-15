@@ -1,33 +1,43 @@
 <%= stylesheet_link_tag "product" %>
 
-<div id="<%= dom_id product %>">
+<div id="<%= dom_id product %>" class="pb-5 mb-5">
 
   <div class="productwrapper">
-    <div class="mainphoto">
+    <div class="largeframe">
       <% if (!product.photos[0].nil?) %>
-        <p>working ;)</p>
+        <div class="storemain-frame">
+          <%= image_tag product.photos[0], class: "mainphoto" %>
+        </div>
       <% else %>
         <p>No Photos :(</p>
       <% end %>
     </div>
 
-  <div class="secondaryphotos">
-    <!-- stuff here -->
-  </div>
+    <div class="secondaryphotos">
+      <ul>
+        <% product.photos.each do |photo| %>
+          <% if photo != product.photos[0] %>
+            <li>
+              <%= image_tag photo, class: "secondaryphoto w-20 mt-2" %>
+            </li>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
 
-  <div class="productdetails">
-    <h1><%= product.name %></h1>
+    <div class="productdetails">
+      <h1><%= product.name %></h1>
 
-    <p><strong>Description:</strong><%= product.description %></p>
+      <p><strong>Description:</strong><%= product.description %></p>
 
-    <p><strong>Price:</strong><%= product.price %></p>
+      <p><strong>Price:</strong><%= product.price %></p>
 
-    <%= form_with(url: cart_add_path) do |f| %>
-      <%= f.hidden_field :id, value: product.id %>
-      <%= f.number_field :quantity, value: 0, min: 1 %>
-      <%= f.submit "Add To Cart" %>
-    <% end %>
-  </div>
+<%= form_with(url: cart_add_path) do |f| %>
+        <%= f.hidden_field :id, value: product.id %>
+        <%= f.number_field :quantity, value: 0, min: 1 %>
+        <%= f.submit "Add To Cart" %>
+      <% end %>
+    </div>
 
 </div>
 

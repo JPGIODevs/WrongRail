@@ -3,9 +3,8 @@
   padding: 0;
 }
 .storemain-frame{
-  position: absolute;
   left: 3vw;
-  padding: 50px;
+  padding: 25px;
   background-color: rgba(255,255,255,0.5);
   backdrop-filter: blur(15px);
   border-radius: 15px;
@@ -16,13 +15,22 @@
 }
 .productwrapper{
   padding: 5vw;
-  display: grid;
-  gap: 3vw;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: minmax(100px, auto);
+  display: flex;
+  flex-direction: row;
 }
 .mainphoto{
-  background: black;
-  grid-column: 1 / 3;
-  grid-row: 1/4;
+  width: 30dvw;
+}
+.largeframe{
+}
+.secondaryphotos{
+  flex-grow: 2;
+}
+.secondaryphoto{
+  width: 10dvw;
+  padding: 10px;
+  background-color: rgba(255,255,255,0.5);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  box-shadow: 0 0 10px 5px rgba(255,255,255,0.5) ;
 }
