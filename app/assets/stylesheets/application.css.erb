@@ -38,8 +38,11 @@ body, html{
   height: 100%;
   background: #9fb2f6 url(<%= asset_path "lightback.png" %>) no-repeat;
   background-size: cover;
-  padding: env(safe-area-inset-top);
+  padding: 0;
   margin: 0;
+}
+.notchy{
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 .storeitem{
   width: 20%;
