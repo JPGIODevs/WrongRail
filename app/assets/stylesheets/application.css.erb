@@ -39,7 +39,8 @@ body, html{
   background: #9fb2f6 url(<%= asset_path "lightback.png" %>) no-repeat;
   background-size: cover;
   margin: 0;
-}
+  min-height: calc(100% + env(safe-area-inset-top));
+  padding-top: env(safe-area-inset-top);
 .storeitem{
   width: 20%;
 }
