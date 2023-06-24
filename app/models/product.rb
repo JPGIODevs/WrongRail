@@ -1,6 +1,6 @@
 class Product < ApplicationRecord
-  has_many :orderables
+  has_many :orderables, dependent: :destroy
   has_many :carts, through: :orderables
-  has_many_attached :photos
+  has_many_attached :photos, dependent: :destroy
 
 end
