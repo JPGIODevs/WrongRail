@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
 
   get 'site/index'
+  get 'site/about'
 
   root "site#index"
 end

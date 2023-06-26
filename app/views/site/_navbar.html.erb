@@ -21,6 +21,9 @@
         <li class="nav-item glownav">
           <%= link_to "Accessories", products_path, class:"nav-link  text-white font-monospace"%>
         </li>
+        <li class="nav-item glownav">
+          <%= link_to "About", site_about_path, class:"nav-link text-white font-monospace"%>
+        </li>
         <li class="nav-item">
             <% if @cart.orderables.count > 0 %>
               <%= link_to "Cart", products_path, class:"nav-link altglownav  text-white font-monospace"%>
