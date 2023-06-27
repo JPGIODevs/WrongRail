@@ -46,6 +46,21 @@
 .shadowtext{
   text-shadow: 2px 2px 5px black;
 }
-#productdetails{
-  margin-top: none;
+.typecontainer{
+  display: inline-block; 
+}
+.typewriter{
+  display: inline-block;
+  letter-spacing: 8px;
+  margin: none;
+  width: 100%;
+  border-right: 5px solid grey;
+  white-space: nowrap;
+  overflow: hidden;
+}
+@keyframes cursor {
+  50% { border-color: transparent }
+}
+@keyframes typing {
+  from { width: 0 }
 }

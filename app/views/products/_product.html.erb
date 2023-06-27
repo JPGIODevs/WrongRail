@@ -23,8 +23,10 @@
           <% end %>
         <% end %>
         <li>
-          <div class="productdetails mt-4 shadowtext">
-            <h1 id="productsdetails" class="font-monospace"><%= product.name %></h1>
+          <div class="mt-4 shadowtext">
+            <div class="typecontainer">
+              <h1 id="productsdetails" class="font-monospace typewriter" style="animation: typing 2s steps(<%= (product.name.length) %>), cursor .4s step-end infinite alternate;"><%= product.name %></h1>
+            </div>
             <p id="productsdetails" class="font-monospace"><strong>Description - </strong><%= product.description %></p>
             <h4><strong>£</strong><%= product.price %></h4>
 
