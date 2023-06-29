@@ -1,11 +1,15 @@
+<%= stylesheet_link_tag "product" %>
+
 <p style="color: green"><%= notice %></p>
 
-<div class="m-5">
-  <h1>Products</h1>
+<section class="productsection p-3">
+  <p class="position">Home / Products</p>
+  <h1 class="productheader">New Releases & Product Drops</h1>
+</section>
 
+<div class="m-5">
   <div id="products">
     <% @products.each do |product| %>
-      <%= render product %>
       <p><%= product.name %></p>
       <p>
       <%= link_to "Show this product", product %>

@@ -1,6 +1,12 @@
+<%= link_to site_index_path do %>
+  <br/>
+  <%= image_tag("navbar/navlogo.png", alt:"Bootstrap", class:"navlogo mobile") %>
+<% end %>
+
+
 <!-- navbar -->
 <nav class="navbar navbar-expand bg-transparent">
-  <div class="container-fluid justify-content-center">
+  <div class="container-fluid justify-content-end">
     <div class="flex-grow-0">
   <ul class="navbar-nav">
         <li class="nav-item glownav">
@@ -16,7 +22,7 @@
           <%= link_to "Accessories", products_path, class:"nav-link  text-white font-monospace"%>
         </li>
         <li class="nav-item glownav">
-          <%= link_to "About", site_about_path, class:"nav-link  text-white font-monospace"%>
+          <%= link_to "About", site_about_path, class:"nav-link text-white font-monospace"%>
         </li>
         <li class="nav-item">
             <% if @cart.orderables.count > 0 %>
@@ -29,5 +35,7 @@
     </div>
   </div>
 </nav>
-
+<%= link_to site_index_path do %>
+  <%= image_tag("navbar/navlogo.png", alt:"Bootstrap", class:"navlogoleft desktop mt-3") %>
+<% end %>
 
