@@ -66,24 +66,20 @@
 }
 .productsection{
   background-color: rgba(255,255,255,0.7);
-  margin-top: 10vh;
   box-shadow: inset 0 0 15px white;
+  padding-top: 3vh;
 }
 .productheader{
   text-align: center;
   color: black;
 }
 .carousel .carousel-item {
-  height: 64dvh;
+  height: 66dvh;
   margin: 0 auto;
 }
 .carousel{
-  border-radius: 5px;
   margin-left: auto;
   margin-right: auto;
-}
-.carousel-inner{
-  border-radius: 10px;
 }
 .carousel-item img {
   left: 0;
@@ -92,4 +88,27 @@
 .carouselimage{
   position: absolute;
   top: -50%;
+}
+.productflexcontainer{
+  display: flex;
+  flex-direction: row;
+  padding: 2vw;
+  gap: 1vw;
+}
+.flexitem{
+  width: 50%;
+  height: 60dvh;
+  text-align: center;
+}
+.flexfirst{
+  background: url(<%= asset_path "productresources/outdoor.png" %>) no-repeat center;
+  background-size: cover; 
+}
+.flexsecond{
+  background: url(<%= asset_path "productresources/active.JPG" %>) no-repeat center;
+  background-size: cover;   
+}
+.landingheader{
+  position: relative;
+  top: 40%;
 }

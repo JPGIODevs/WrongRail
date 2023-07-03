@@ -2,9 +2,10 @@
 
 <p style="color: green"><%= notice %></p>
 
-<section class="productsection p-3">
+<section class="productsection">
   <p class="position">Home / Products</p>
-  <h1 class="productheader pb-3">New Releases & Product Drops</h1>
+  <h1 class="productheader">New Releases & Product Drops</h1>
+  <p class="productheader pb-3">Explore new releases, limited edition WrongRail product drops, and featured collections.</p>
 
   <div id="carouselExampleFade" class="carousel slide carousel-fade pb-5">
     <div class="carousel-inner">
@@ -33,12 +34,27 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
+
+  <div class="productflexcontainer">
+    <div class="flexfirst flexitem">
+      <div class="landingheader">
+        <h1>OutDoors</h1>
+        <h4>Exemplar</h4>
+        <p>details</p>
+        <button type="button" class="btn btn-light"><b class="p-3">EXPLORE</b></button>
+      </div>
+    </div>
+
+    <div class="flexsecond flexitem">
+      <div class="landingheader">
+        <h1>Active-Wear</h1>
+        <h4>Exemplar</h4>
+        <p>details</p>
+        <button type="button" class="btn btn-light"><b class="p-3">EXPLORE</b></button>
+      </div>
+    </div>
+  </div>
 </section>
-
-<div class="productflexcontainer">
-
-</div>
-
 
 <% if user_signed_in? %>
   <%= link_to "New product", new_product_path %>
