@@ -26,8 +26,8 @@
 
     <%= yield %>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <p class="notice" style="display:none;"><%= notice %></p>
+    <p class="alert" style="display:none;"><%= alert %></p>
 
     <div class="admintools">
       <% if user_signed_in? %>
