@@ -20,9 +20,9 @@
         </li>
         <li class="nav-item">
             <% if @cart.orderables.count > 0 %>
-              <%= link_to "Cart", products_path, class:"nav-link altglownav  text-white font-monospace"%>
+              <%= link_to "Cart", cart_view_path, class:"nav-link altglownav  text-white font-monospace"%>
             <% else %>
-              <%= link_to "Cart", products_path, class:"nav-link glownav  text-white font-monospace"%>
+              <%= link_to "Cart", cart_view_path, class:"nav-link glownav  text-white font-monospace"%>
             <% end %>
         </li>
       </ul>
